@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(npx tsc:*)",
-      "Bash(rm package-lock.json)",
-      "Bash(pnpm install:*)"
-    ]
-  }
-}
