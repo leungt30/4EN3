@@ -44,7 +44,7 @@ export default async function Home() {
           FloodReady is a hyperlocal alert and preparedness network built
           specifically for the Dixie-Dundas community. Get flood warnings,
           evacuation routes, and emergency resources tailored to your
-          neighbourhood — before, during, and after a flood event.
+          neighbourhood, before, during, and after a flood event.
         </p>
 
         <div id="signup">
@@ -80,13 +80,13 @@ export default async function Home() {
             <h2 className="section-title">Generic alerts don&apos;t tell you what to do next</h2>
             <p className="section-body">
               When flooding threatens Dixie-Dundas, Environment Canada&apos;s weather
-              alerts tell you a storm is coming — but not which streets will flood
+              alerts tell you a storm is coming, but not which streets will flood
               first, where to go, or who to call for help in Mississauga.
             </p>
             <p className="section-body" style={{ marginTop: "16px" }}>
               FloodReady fills that gap. We deliver neighbourhood-specific
-              warnings and connect residents — especially seniors and those with
-              home damage risk — to the exact resources they need, right when
+              warnings and connect residents (especially seniors and those with
+              home damage risk) to the exact resources they need, right when
               they need them.
             </p>
 
@@ -95,7 +95,7 @@ export default async function Home() {
               <p className="alert-banner-text">
                 <strong>Built for Dixie-Dundas.</strong> Our alerts reference
                 real local landmarks, shelters, and City of Mississauga emergency
-                contacts — not generic province-wide guidance.
+                contacts, not generic province-wide guidance.
               </p>
             </div>
           </div>
@@ -105,7 +105,7 @@ export default async function Home() {
             <div className="mock-alert">
               <span className="mock-alert-icon">🟠</span>
               <div className="mock-alert-body">
-                <p className="mock-alert-title warning">Flood Watch — Dixie-Dundas</p>
+                <p className="mock-alert-title warning">Flood Watch: Dixie-Dundas</p>
                 <p className="mock-alert-desc">
                   Water levels rising near Cooksville Creek. Residents on Derry Rd
                   W between Dixie and Cawthra advised to move valuables to upper floors.
@@ -147,7 +147,7 @@ export default async function Home() {
           <p className="section-label">Flood Risk Area</p>
           <h2 className="section-title">See if your home is in the flood zone</h2>
           <p className="section-body">
-            The blue areas below show the official TRCA floodplain for Dixie-Dundas —
+            The blue areas below show the official TRCA floodplain for Dixie-Dundas.
             land at risk of flooding from Little Etobicoke Creek. If your street
             falls within this zone, you are especially encouraged to sign up for early alerts.
           </p>
@@ -237,7 +237,7 @@ export default async function Home() {
               <h3>Local Emergency Contacts</h3>
               <p>
                 Mississauga and Peel Region hotlines, shelters, and services
-                — not a generic national list. The right number, right away.
+                Not a generic national list. The right number, right away.
               </p>
             </div>
 
@@ -283,7 +283,7 @@ export default async function Home() {
               <h3>Access local resources</h3>
               <p>
                 Follow links directly to Mississauga shelters, evacuation
-                routes, senior assistance, and recovery programs — no searching needed.
+                routes, senior assistance, and recovery programs. No searching needed.
               </p>
             </div>
           </div>
@@ -296,7 +296,7 @@ export default async function Home() {
           <h2>Protect yourself and your neighbours</h2>
           <p>
             Flooding in Dixie-Dundas is getting more frequent. The best time
-            to prepare is before the next event — join the network today.
+            to prepare is before the next event. Join the network today.
           </p>
           <SignupForm initialCount={count} />
         </div>
