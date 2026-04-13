@@ -141,6 +141,54 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* ── FLOOD RISK MAP ── */}
+      <section className="map-section">
+        <div className="section-inner">
+          <p className="section-label">Flood Risk Area</p>
+          <h2 className="section-title">See if your home is in the flood zone</h2>
+          <p className="section-body">
+            The blue areas below show the official TRCA floodplain for Dixie-Dundas —
+            land at risk of flooding from Little Etobicoke Creek. If your street
+            falls within this zone, you are especially encouraged to sign up for early alerts.
+          </p>
+
+          <div className="map-container">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://trcaca.s3.ca-central-1.amazonaws.com/app/uploads/2020/02/13141653/dixie-dundas-map-viewer-new.jpg"
+              alt="TRCA floodplain map of the Dixie-Dundas area in Mississauga, showing blue flood risk zones around Little Etobicoke Creek near Dundas St and Dixie Rd"
+              className="map-image"
+            />
+            <div className="map-legend">
+              <div className="map-legend-item">
+                <span className="map-legend-swatch flood" />
+                Floodplain (at-risk area)
+              </div>
+              <div className="map-legend-item">
+                <span className="map-legend-swatch boundary" />
+                Special Policy Area boundary
+              </div>
+            </div>
+            <div className="map-attribution">
+              Map data © Toronto and Region Conservation Authority (TRCA), 2020.
+              For precise flood plain limits, use the interactive viewer.
+            </div>
+          </div>
+
+          <a
+            href="https://trca.ca/conservation/flood-risk-management/flood-plain-map-viewer/#use-now"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="map-cta-link"
+          >
+            View Interactive Flood Plain Map
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+            </svg>
+          </a>
+        </div>
+      </section>
+
       {/* ── FEATURES ── */}
       <section className="features-section">
         <div className="section-inner">
