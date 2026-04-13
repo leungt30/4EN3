@@ -131,7 +131,7 @@ export default async function Home() {
               <div className="mock-alert-body">
                 <p className="mock-alert-title success">Senior Assistance Available</p>
                 <p className="mock-alert-desc">
-                  Need help evacuating? Call Peel Region Emergency at
+                  Need help evacuating? Call Peel Regional Police (non-emergency) at
                   905-453-3311 or reply HELP to this alert for a callback.
                 </p>
                 <span className="mock-alert-tag">For seniors &amp; those with mobility needs</span>
