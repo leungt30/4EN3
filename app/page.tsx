@@ -1,13 +1,13 @@
 import SignupForm from "./components/SignupForm";
 import StatsBar from "./components/StatsBar";
+import { supabase } from "@/lib/supabase";
 
 async function getSignupCount(): Promise<number> {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
-    const res = await fetch(`${baseUrl}/api/count`, { cache: "no-store" });
-    if (!res.ok) return 0;
-    const data = await res.json();
-    return data.count ?? 0;
+    const { count } = await supabase
+      .from("signups")
+      .select("*", { count: "exact", head: true });
+    return count ?? 0;
   } catch {
     return 0;
   }
