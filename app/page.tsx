@@ -236,8 +236,8 @@ export default async function Home() {
               <div className="feature-icon">📞</div>
               <h3>Local Emergency Contacts</h3>
               <p>
-                Mississauga and Peel Region hotlines, shelters, and services
-                Not a generic national list. The right number, right away.
+                The right local hotlines, shelters, and services for Mississauga
+                and Peel Region. The right number, right away.
               </p>
             </div>
 
