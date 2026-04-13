@@ -22,7 +22,7 @@ export default async function Home() {
       <nav>
         <div className="nav-logo">
           <span className="nav-logo-icon">🌊</span>
-          <span>Flood<span>Ready</span></span>
+          <span>Flood<span>Watch</span></span>
           <span className="nav-location">Dixie-Dundas, Mississauga</span>
         </div>
         <a href="#" className="nav-cta">Join the Network</a>
@@ -41,7 +41,7 @@ export default async function Home() {
         </h1>
 
         <p className="hero-sub">
-          FloodReady is a hyperlocal alert and preparedness network built
+          FloodWatch is a hyperlocal alert and preparedness network built
           specifically for the Dixie-Dundas community. Get flood warnings,
           evacuation routes, and emergency resources tailored to your
           neighbourhood, before, during, and after a flood event.
@@ -84,7 +84,7 @@ export default async function Home() {
               first, where to go, or who to call for help in Mississauga.
             </p>
             <p className="section-body" style={{ marginTop: "16px" }}>
-              FloodReady fills that gap. We deliver neighbourhood-specific
+              FloodWatch fills that gap. We deliver neighbourhood-specific
               warnings and connect residents (especially seniors and those with
               home damage risk) to the exact resources they need, right when
               they need them.
@@ -304,7 +304,7 @@ export default async function Home() {
 
       {/* ── FOOTER ── */}
       <footer>
-        <span>© {new Date().getFullYear()} FloodReady Dixie-Dundas. All rights reserved.</span>
+        <span>© {new Date().getFullYear()} FloodWatch Dixie-Dundas. All rights reserved.</span>
         <span className="footer-location">
           📍 Dixie-Dundas, Mississauga, ON
         </span>
