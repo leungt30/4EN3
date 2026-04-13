@@ -22,11 +22,6 @@ export default function StatsBar({ count }: StatsBarProps) {
           <span className="stat-number">24/7</span>
           <span className="stat-label">Monitoring</span>
         </div>
-        <div className="stat-divider" />
-        <div className="stat-item">
-          <span className="stat-number">Free</span>
-          <span className="stat-label">Always</span>
-        </div>
       </div>
     </div>
   );

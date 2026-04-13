@@ -25,7 +25,7 @@ export default async function Home() {
           <span>Flood<span>Ready</span></span>
           <span className="nav-location">Dixie-Dundas, Mississauga</span>
         </div>
-        <a href="#signup" className="nav-cta">Join the Network</a>
+        <a href="#" className="nav-cta">Join the Network</a>
       </nav>
 
       {/* ── HERO ── */}
