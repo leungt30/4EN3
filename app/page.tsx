@@ -1,4 +1,5 @@
 import SignupForm from "./components/SignupForm";
+import StatsBar from "./components/StatsBar";
 
 async function getSignupCount(): Promise<number> {
   try {
@@ -19,72 +20,122 @@ export default async function Home() {
     <>
       {/* ── NAV ── */}
       <nav>
-        <span className="nav-logo">Your<span>Product</span></span>
-        <a href="#signup" className="nav-cta">Get Early Access</a>
+        <div className="nav-logo">
+          <span className="nav-logo-icon">🌊</span>
+          <span>Flood<span>Ready</span></span>
+          <span className="nav-location">Dixie-Dundas, Mississauga</span>
+        </div>
+        <a href="#signup" className="nav-cta">Join the Network</a>
       </nav>
 
       {/* ── HERO ── */}
       <div className="hero">
         <div className="badge">
           <span className="badge-dot" />
-          Now accepting early access signups
+          Community Early-Warning Network
         </div>
 
         <h1>
-          The smarter way to{" "}
-          <span className="highlight">do what your product does</span>
+          Know before the{" "}
+          <span className="highlight">flood reaches your street</span>
         </h1>
 
         <p className="hero-sub">
-          Replace this with a one-to-two sentence value proposition. What pain
-          does this solve? Who is it for? Why should they care right now?
+          FloodReady is a hyperlocal alert and preparedness network built
+          specifically for the Dixie-Dundas community. Get flood warnings,
+          evacuation routes, and emergency resources tailored to your
+          neighbourhood — before, during, and after a flood event.
         </p>
 
         <div id="signup">
           <SignupForm initialCount={count} />
         </div>
+
+        <div className="social-proof">
+          <div className="proof-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Free for all residents
+          </div>
+          <div className="proof-divider" />
+          <div className="proof-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            No app download needed
+          </div>
+          <div className="proof-divider" />
+          <div className="proof-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Mississauga-specific resources
+          </div>
+        </div>
       </div>
 
-      {/* ── SOCIAL PROOF BAR ── */}
-      <div className="social-proof">
-        <div className="proof-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          No credit card required
-        </div>
-        <div className="proof-divider" />
-        <div className="proof-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          Free during beta
-        </div>
-        <div className="proof-divider" />
-        <div className="proof-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          Cancel anytime
-        </div>
-      </div>
+      {/* ── STATS BAR ── */}
+      <StatsBar count={count} />
 
       {/* ── PRODUCT DESCRIPTION ── */}
       <section className="product-section">
         <div className="section-inner product-layout">
           <div>
-            <p className="section-label">What it is</p>
-            <h2 className="section-title">Built for people who need this problem solved</h2>
+            <p className="section-label">The Problem</p>
+            <h2 className="section-title">Generic alerts don&apos;t tell you what to do next</h2>
             <p className="section-body">
-              This is where you describe your product in 2–4 sentences. Explain
-              the core problem it solves and who it's designed for. Be specific —
-              vague descriptions don't convert. If someone reads this and
-              immediately thinks "that's exactly what I need," you've nailed it.
+              When flooding threatens Dixie-Dundas, Environment Canada&apos;s weather
+              alerts tell you a storm is coming — but not which streets will flood
+              first, where to go, or who to call for help in Mississauga.
             </p>
             <p className="section-body" style={{ marginTop: "16px" }}>
-              Add a second paragraph if needed to describe the broader vision or
-              what makes your approach different from what already exists.
+              FloodReady fills that gap. We deliver neighbourhood-specific
+              warnings and connect residents — especially seniors and those with
+              home damage risk — to the exact resources they need, right when
+              they need them.
             </p>
+
+            <div className="alert-banner">
+              <span className="alert-banner-icon">📍</span>
+              <p className="alert-banner-text">
+                <strong>Built for Dixie-Dundas.</strong> Our alerts reference
+                real local landmarks, shelters, and City of Mississauga emergency
+                contacts — not generic province-wide guidance.
+              </p>
+            </div>
           </div>
 
+          {/* Mock alert preview */}
           <div className="product-visual">
-            <div className="product-visual-inner">
-              <div className="product-icon">🚀</div>
-              <span className="product-visual-label">Product screenshot / demo</span>
+            <div className="mock-alert">
+              <span className="mock-alert-icon">🟠</span>
+              <div className="mock-alert-body">
+                <p className="mock-alert-title warning">Flood Watch — Dixie-Dundas</p>
+                <p className="mock-alert-desc">
+                  Water levels rising near Cooksville Creek. Residents on Derry Rd
+                  W between Dixie and Cawthra advised to move valuables to upper floors.
+                </p>
+                <span className="mock-alert-tag">Issued 2 min ago</span>
+              </div>
+            </div>
+
+            <div className="mock-alert">
+              <span className="mock-alert-icon">🔵</span>
+              <div className="mock-alert-body">
+                <p className="mock-alert-title info">Evacuation Route Active</p>
+                <p className="mock-alert-desc">
+                  Dundas St W eastbound open. Recommended shelter: Mississauga
+                  Valley Community Centre (1275 Mississauga Valley Blvd).
+                </p>
+                <span className="mock-alert-tag">Resource</span>
+              </div>
+            </div>
+
+            <div className="mock-alert">
+              <span className="mock-alert-icon">🟢</span>
+              <div className="mock-alert-body">
+                <p className="mock-alert-title success">Senior Assistance Available</p>
+                <p className="mock-alert-desc">
+                  Need help evacuating? Call Peel Region Emergency at
+                  905-453-3311 or reply HELP to this alert for a callback.
+                </p>
+                <span className="mock-alert-tag">For seniors &amp; those with mobility needs</span>
+              </div>
             </div>
           </div>
         </div>
@@ -93,61 +144,61 @@ export default async function Home() {
       {/* ── FEATURES ── */}
       <section className="features-section">
         <div className="section-inner">
-          <p className="section-label">Features</p>
-          <h2 className="section-title">Everything you need</h2>
+          <p className="section-label">What we provide</p>
+          <h2 className="section-title">Everything your neighbourhood needs</h2>
 
           <div className="features-grid">
             <div className="feature-card">
-              <div className="feature-icon">⚡</div>
-              <h3>Feature One</h3>
+              <div className="feature-icon">🌊</div>
+              <h3>Hyperlocal Flood Alerts</h3>
               <p>
-                Describe this feature in one or two sentences. Focus on the
-                benefit to the user, not the technical implementation.
+                Street-level warnings for Dixie-Dundas, not just city-wide
+                advisories. Know if your block is at risk before water arrives.
               </p>
             </div>
 
             <div className="feature-card">
-              <div className="feature-icon">🔒</div>
-              <h3>Feature Two</h3>
+              <div className="feature-icon">🚗</div>
+              <h3>Evacuation Routes</h3>
               <p>
-                Describe this feature in one or two sentences. Focus on the
-                benefit to the user, not the technical implementation.
+                Pre-planned, real-time updated routes out of the area with
+                live road closure info specific to Mississauga.
               </p>
             </div>
 
             <div className="feature-card">
-              <div className="feature-icon">📊</div>
-              <h3>Feature Three</h3>
+              <div className="feature-icon">🏠</div>
+              <h3>Home Protection Guides</h3>
               <p>
-                Describe this feature in one or two sentences. Focus on the
-                benefit to the user, not the technical implementation.
+                Step-by-step instructions for protecting your home before
+                and during a flood, tailored to common housing in the area.
               </p>
             </div>
 
             <div className="feature-card">
-              <div className="feature-icon">🔗</div>
-              <h3>Feature Four</h3>
+              <div className="feature-icon">👴</div>
+              <h3>Senior &amp; Accessibility Support</h3>
               <p>
-                Describe this feature in one or two sentences. Focus on the
-                benefit to the user, not the technical implementation.
+                Dedicated resources and direct assistance connections for
+                elderly residents and those with mobility or accessibility needs.
               </p>
             </div>
 
             <div className="feature-card">
-              <div className="feature-icon">🎯</div>
-              <h3>Feature Five</h3>
+              <div className="feature-icon">📞</div>
+              <h3>Local Emergency Contacts</h3>
               <p>
-                Describe this feature in one or two sentences. Focus on the
-                benefit to the user, not the technical implementation.
+                Mississauga and Peel Region hotlines, shelters, and services
+                — not a generic national list. The right number, right away.
               </p>
             </div>
 
             <div className="feature-card">
-              <div className="feature-icon">🛠️</div>
-              <h3>Feature Six</h3>
+              <div className="feature-icon">🔄</div>
+              <h3>Post-Flood Recovery</h3>
               <p>
-                Describe this feature in one or two sentences. Focus on the
-                benefit to the user, not the technical implementation.
+                Damage assessment resources, insurance guidance, and City of
+                Mississauga recovery programs to help you rebuild faster.
               </p>
             </div>
           </div>
@@ -158,33 +209,33 @@ export default async function Home() {
       <section className="how-section">
         <div className="section-inner">
           <p className="section-label">How it works</p>
-          <h2 className="section-title">Up and running in minutes</h2>
+          <h2 className="section-title">Simple. Local. Life-saving.</h2>
 
           <div className="steps">
             <div className="step">
               <div className="step-number">1</div>
-              <h3>Sign up</h3>
+              <h3>Sign up for free</h3>
               <p>
-                Describe the first step. Keep it short and action-oriented.
-                What does the user actually do?
+                Enter your email to join the Dixie-Dundas community network.
+                No app download, no account setup required.
               </p>
             </div>
 
             <div className="step">
               <div className="step-number">2</div>
-              <h3>Configure</h3>
+              <h3>Receive targeted alerts</h3>
               <p>
-                Describe the second step. Emphasize how easy or fast this
-                is — reduce perceived friction.
+                Get notified the moment flood conditions are detected in your
+                area, with specific guidance on what to do right now.
               </p>
             </div>
 
             <div className="step">
               <div className="step-number">3</div>
-              <h3>Get results</h3>
+              <h3>Access local resources</h3>
               <p>
-                Describe what happens after — the payoff. This is where you
-                reinforce the core value proposition.
+                Follow links directly to Mississauga shelters, evacuation
+                routes, senior assistance, and recovery programs — no searching needed.
               </p>
             </div>
           </div>
@@ -194,10 +245,10 @@ export default async function Home() {
       {/* ── BOTTOM CTA ── */}
       <section className="bottom-cta" id="signup-bottom">
         <div className="bottom-cta-inner">
-          <h2>Ready to get started?</h2>
+          <h2>Protect yourself and your neighbours</h2>
           <p>
-            Join the waitlist today and be among the first to experience it when
-            we launch.
+            Flooding in Dixie-Dundas is getting more frequent. The best time
+            to prepare is before the next event — join the network today.
           </p>
           <SignupForm initialCount={count} />
         </div>
@@ -205,8 +256,10 @@ export default async function Home() {
 
       {/* ── FOOTER ── */}
       <footer>
-        <span>© {new Date().getFullYear()} YourProduct. All rights reserved.</span>
-        <span>Made with ♥ — coming soon</span>
+        <span>© {new Date().getFullYear()} FloodReady Dixie-Dundas. All rights reserved.</span>
+        <span className="footer-location">
+          📍 Dixie-Dundas, Mississauga, ON
+        </span>
       </footer>
     </>
   );

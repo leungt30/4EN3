@@ -33,7 +33,7 @@ export default function SignupForm({ initialCount }: SignupFormProps) {
 
     setStatus("success");
     setCount(data.count);
-    setMessage("You're on the list! We'll be in touch soon.");
+    setMessage("You're on the list! We'll alert you when we launch.");
     setEmail("");
   }
 
@@ -44,7 +44,7 @@ export default function SignupForm({ initialCount }: SignupFormProps) {
           <span className="success-icon">✓</span>
           <p className="success-message">{message}</p>
           <p className="signup-count">
-            You're one of <strong>{count.toLocaleString()}</strong> people already signed up.
+            You&apos;re one of <strong>{count.toLocaleString()}</strong> Dixie-Dundas residents signed up.
           </p>
         </div>
       ) : (
@@ -68,12 +68,16 @@ export default function SignupForm({ initialCount }: SignupFormProps) {
             </button>
           </form>
           {message && <p className="error-message">{message}</p>}
-          {count > 0 && (
-            <p className="signup-count">
-              Join <strong>{count.toLocaleString()}</strong>{" "}
-              {count === 1 ? "person" : "people"} already on the waitlist.
-            </p>
-          )}
+          <p className="signup-count">
+            {count > 0 ? (
+              <>
+                Join <strong>{count.toLocaleString()}</strong>{" "}
+                {count === 1 ? "neighbour" : "neighbours"} already signed up in Dixie-Dundas.
+              </>
+            ) : (
+              <>Be the first in your community to sign up.</>
+            )}
+          </p>
         </>
       )}
     </div>

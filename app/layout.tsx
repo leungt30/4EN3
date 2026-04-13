@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "YourProduct — Coming Soon",
-  description: "Be the first to know when we launch. Sign up for early access.",
+  title: "FloodReady Dixie-Dundas — Community Early-Warning Network",
+  description:
+    "Hyperlocal flood alerts and emergency resources for residents of the Dixie-Dundas community in Mississauga. Sign up for early access.",
 };
 
 export default function RootLayout({
